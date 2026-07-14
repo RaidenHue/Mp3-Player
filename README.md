@@ -9,9 +9,7 @@ volume slider.
 - **Java 17+** (JDK, not just JRE)
 - **Maven 3.6+**
 
-JavaFX itself is *not* something you need to install separately — it's pulled in
-automatically as a Maven dependency (see `pom.xml`), so you don't need to worry
-about setting up a JavaFX SDK by hand.
+JavaFX itself is *not* something you need to install separately btw
 
 ## How to run
 
@@ -27,14 +25,14 @@ locally.
 
 ## How to use it
 
-1. Click **Import MP3(s)** and pick one or more `.mp3` files, or just drag and
+1. import by clicking the "Import MP3s" and pick one or more `.mp3` files, or just drag and
    drop MP3 files onto the window.
-2. Click a track in the playlist to play it (or hit **Play** to start the
+2. click a track in the playlist to play it (or hit **Play** to start the
    first track).
-3. Use **Prev / Play-Pause / Stop / Next** to control playback.
-4. Drag the seek bar to jump to a position in the track.
-5. Adjust the volume slider on the right.
-6. When a track ends, the player automatically advances to the next one
+3. use **Prev / Play-Pause / Stop / Next** to control playback.
+4. drag the seek bar to jump to a position in the track.
+5. adjust the volume slider to maximize or minimize volume.
+6. the player automatically advances to the next one after the current track ends.
    (looping back to the top of the playlist after the last track).
 
 ## Project structure
@@ -49,12 +47,7 @@ musicplayer/
 
 ## Notes / possible extensions
 
-- Only `.mp3` files are accepted right now; JavaFX's `Media`/`MediaPlayer`
-  also supports `.wav` and `.aiff` if you want to widen the file filter.
+- Only `.mp3` files are used right now.
 - Playlist order is just import order — you could add drag-to-reorder in the
   `ListView`, or a "shuffle" toggle.
-- There's no persistence yet (playlist resets each run) — could be added with
-  a simple text file or `java.util.prefs.Preferences` storing file paths.
-- If you'd rather not depend on Maven downloading JavaFX at build time, you
-  can instead download the JavaFX SDK for your OS from
-  https://openjfx.io and point `--module-path` at it manually.
+- There's no persistence yet (playlist resets each run)
