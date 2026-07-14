@@ -39,10 +39,10 @@ locally.
 
 ```
 musicplayer/
-├── pom.xml                                     # Maven build config (JavaFX deps + run plugin)
+├── pom.xml                                     
 ├── README.md
 └── src/main/java/com/musicplayer/
-    └── MusicPlayerApp.java                     # Entire application (UI + playback logic)
+    └── MusicPlayerApp.java                     
 ```
 
 ## Notes / possible extensions
